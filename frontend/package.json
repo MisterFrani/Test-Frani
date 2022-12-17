@@ -1,5 +1,5 @@
 {
-  "name": "test frani",
+  "name": "affluences-checking",
   "description": "Check availability",
   "author": "Frani B.",
   "keywords": [
@@ -8,9 +8,6 @@
   ],
   "license": "MIT",
   "homepage": "#",
-  "bugs": {
-    "url": "#"
-  },
   "repository": {
     "type": "git",
     "url": "#"
