@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Alert, Form, Col, Row, Container } from '@themesberg/react-bootstrap';
 import { getAvailable } from './../../data/resource';
 import logo from './../../assets/img/logo.png';
@@ -7,6 +7,21 @@ export default () => {
   const [date, setDate] = useState(null);
   const [time, setTime] = useState(null);
   const [result, setResult] = useState(null);
+  const [timesOption, setTimesOption] = useState([]);
+
+  useEffect(() => {
+    getTimes();
+  }, []);
+
+  const getTimes = () => {
+    const times = [];
+    for (let i = 0; i <= 23; i++) {
+      let hours = (i < 10 ? '0' + i : i).toString();
+      times.push(`${hours}:00`);
+      times.push(`${hours}:30`);
+    }
+    setTimesOption(times);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -58,11 +73,15 @@ export default () => {
             </Col>
             <Col md="6 mb-2">
               <Form.Group>
-                <Form.Control
-                  type="time"
+                <Form.Select
                   name="time"
                   onChange={(e) => setTime(e.target.value)}
-                />
+                >
+                  <option>--:--</option>
+                  {timesOption.map((item) => (
+                    <option value={item}>{item}</option>
+                  ))}
+                </Form.Select>
               </Form.Group>
             </Col>
           </Row>
