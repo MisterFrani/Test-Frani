@@ -1,0 +1,57 @@
+{
+  "name": "test frani",
+  "description": "Check availability",
+  "author": "Frani B.",
+  "keywords": [
+    "bootstrap 5",
+    "react"
+  ],
+  "license": "MIT",
+  "homepage": "#",
+  "bugs": {
+    "url": "#"
+  },
+  "repository": {
+    "type": "git",
+    "url": "#"
+  },
+  "version": "0.1.13.1",
+  "dependencies": {
+    "@themesberg/react-bootstrap": "^1.4.1",
+    "axios": "^0.21.1",
+    "bootstrap": "5.0.0-beta1",
+    "history": "^5.0.0",
+    "mdbreact": "^5.0.2",
+    "react": "^16.13.1",
+    "react-datetime": "^3.0.4",
+    "react-dom": "^16.13.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build-local": "PUBLIC_URL=./ react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.16"
+  }
+}
